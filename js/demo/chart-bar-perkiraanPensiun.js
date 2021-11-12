@@ -27,27 +27,19 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-// Area Chart Example
-var ctx = document.getElementById('chartKesejahteraanDosen');
-var myLineChart = new Chart(ctx, {
-  type: 'line',
+// Bar Chart Example
+var ctx = document.getElementById('chartPerkiraanPensiun');
+var myBarChart = new Chart(ctx, {
+  type: 'bar',
   data: {
-    labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+    labels: ['2021', '2022', '2023', '2024', '2025', '2026'],
     datasets: [
       {
-        label: 'Rata-rata gaji',
-        lineTension: 0.3,
-        backgroundColor: 'rgba(78, 115, 223, 0.05)',
-        borderColor: 'rgba(78, 115, 223, 1)',
-        pointRadius: 3,
-        pointBackgroundColor: 'rgba(78, 115, 223, 1)',
-        pointBorderColor: 'rgba(78, 115, 223, 1)',
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: 'rgba(78, 115, 223, 1)',
-        pointHoverBorderColor: 'rgba(78, 115, 223, 1)',
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        data: ['3200000', '3500000', '3800000', '4000000', '4000000', '4000000', '4300000', '4300000', '4500000', '4500000', '4700000', '5000000'],
+        label: 'Jumlah',
+        backgroundColor: '#4e73df',
+        hoverBackgroundColor: '#2e59d9',
+        borderColor: '#4e73df',
+        data: [21, 17, 40, 33, 32, 28],
       },
     ],
   },
@@ -65,25 +57,28 @@ var myLineChart = new Chart(ctx, {
       xAxes: [
         {
           time: {
-            unit: 'date',
+            unit: 'month',
           },
           gridLines: {
             display: false,
             drawBorder: false,
           },
           ticks: {
-            maxTicksLimit: 7,
+            maxTicksLimit: 6,
           },
+          maxBarThickness: 25,
         },
       ],
       yAxes: [
         {
           ticks: {
+            min: 0,
+            max: 40,
             maxTicksLimit: 5,
             padding: 10,
             // Include a dollar sign in the ticks
             callback: function (value, index, values) {
-              return 'Rp. ' + number_format(value);
+              return number_format(value) + ' Orang';
             },
           },
           gridLines: {
@@ -100,23 +95,21 @@ var myLineChart = new Chart(ctx, {
       display: false,
     },
     tooltips: {
-      backgroundColor: 'rgb(255,255,255)',
-      bodyFontColor: '#858796',
       titleMarginBottom: 10,
       titleFontColor: '#6e707e',
       titleFontSize: 14,
+      backgroundColor: 'rgb(255,255,255)',
+      bodyFontColor: '#858796',
       borderColor: '#dddfeb',
       borderWidth: 1,
       xPadding: 15,
       yPadding: 15,
       displayColors: false,
-      intersect: false,
-      mode: 'index',
       caretPadding: 10,
       callbacks: {
         label: function (tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + ' Rupiah';
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + ' Orang';
         },
       },
     },

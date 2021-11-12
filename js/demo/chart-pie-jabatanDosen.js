@@ -7,12 +7,12 @@ var ctx = document.getElementById('chartJabatanDosen');
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ['Tenaga Pengajar', 'Asisten Ahli', 'Profesor', 'Lektor Kepala'],
+    labels: ['Tenaga Pengajar', 'Asisten Ahli', 'Profesor', 'Lektor Kepala', 'Lektor'],
     datasets: [
       {
-        data: [55, 26, 8, 11],
-        backgroundColor: ['#8e78d6', '#30a4fc', '#30e8aa', '#febf44'],
-        hoverBackgroundColor: ['#5f5090', '#1f659a', '#1d9069', '#a97f2b'],
+        data: [55, 26, 8, 11, 16],
+        backgroundColor: ['#8e78d6', '#30a4fc', '#30e8aa', '#febf44', '#f44336'],
+        hoverBackgroundColor: ['#5f5090', '#1f659a', '#1d9069', '#9c3d36'],
         hoverBorderColor: 'rgba(234, 236, 1)',
       },
     ],

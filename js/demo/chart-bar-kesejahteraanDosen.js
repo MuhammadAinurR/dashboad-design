@@ -27,27 +27,30 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-// Area Chart Example
-var ctx = document.getElementById('chartKesejahteraanDosen');
-var myLineChart = new Chart(ctx, {
-  type: 'line',
+// Bar Chart Example
+var ctx = document.getElementById('ctx');
+var chart = new Chart(ctx, {
+  type: 'bar',
   data: {
-    labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'], // responsible for how many bars are gonna show on the chart
+    // create 12 datasets, since we have 12 items
+    // data[0] = labels[0] (data for first bar - 'Standing costs') | data[1] = labels[1] (data for second bar - 'Running costs')
+    // put 0, if there is no data for the particular bar
     datasets: [
       {
-        label: 'Rata-rata gaji',
-        lineTension: 0.3,
-        backgroundColor: 'rgba(78, 115, 223, 0.05)',
-        borderColor: 'rgba(78, 115, 223, 1)',
-        pointRadius: 3,
-        pointBackgroundColor: 'rgba(78, 115, 223, 1)',
-        pointBorderColor: 'rgba(78, 115, 223, 1)',
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: 'rgba(78, 115, 223, 1)',
-        pointHoverBorderColor: 'rgba(78, 115, 223, 1)',
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        data: ['3200000', '3500000', '3800000', '4000000', '4000000', '4000000', '4300000', '4300000', '4500000', '4500000', '4700000', '5000000'],
+        label: 'Gaji Pokok',
+        data: [3800000, 3800000, 4200000, 4200000, 4200000, 4200000, 4500000, 4500000, 5000000, 5000000, 5200000],
+        backgroundColor: '#007aff',
+      },
+      {
+        label: 'Tunjangan Keluarga',
+        data: [150000, 150000, 300000, 300000, 300000, 300000, 350000, 350000, 400000, 500000, 600000],
+        backgroundColor: '#1cc88a',
+      },
+      {
+        label: 'Tunjangan Jabatan',
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 300000, 400000, 850000],
+        backgroundColor: '#36b9cd',
       },
     ],
   },
@@ -61,62 +64,37 @@ var myLineChart = new Chart(ctx, {
         bottom: 0,
       },
     },
+    legend: {
+      display: false,
+    },
     scales: {
       xAxes: [
         {
-          time: {
-            unit: 'date',
-          },
-          gridLines: {
-            display: false,
-            drawBorder: false,
-          },
-          ticks: {
-            maxTicksLimit: 7,
-          },
+          stacked: true, // this should be set to make the bars stacked
         },
       ],
       yAxes: [
         {
-          ticks: {
-            maxTicksLimit: 5,
-            padding: 10,
-            // Include a dollar sign in the ticks
-            callback: function (value, index, values) {
-              return 'Rp. ' + number_format(value);
-            },
-          },
-          gridLines: {
-            color: 'rgb(234, 236, 244)',
-            zeroLineColor: 'rgb(234, 236, 244)',
-            drawBorder: false,
-            borderDash: [2],
-            zeroLineBorderDash: [2],
-          },
+          stacked: true, // this also..
         },
       ],
     },
-    legend: {
-      display: false,
-    },
     tooltips: {
-      backgroundColor: 'rgb(255,255,255)',
-      bodyFontColor: '#858796',
       titleMarginBottom: 10,
       titleFontColor: '#6e707e',
       titleFontSize: 14,
+      backgroundColor: 'rgb(255,255,255)',
+      bodyFontColor: '#858796',
       borderColor: '#dddfeb',
       borderWidth: 1,
       xPadding: 15,
       yPadding: 15,
       displayColors: false,
-      intersect: false,
-      mode: 'index',
       caretPadding: 10,
       callbacks: {
         label: function (tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + ' Rupiah';
+          return datasetLabel + ' : ' + number_format(tooltipItem.yLabel) + ' Rupiah';
         },
       },
     },

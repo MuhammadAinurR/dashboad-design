@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="profilDosenK.css" rel="stylesheet" />
   </head>
 
   <body id="page-top">
@@ -164,7 +165,17 @@
             <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
               <i class="fa fa-bars"></i>
             </button>
-
+            <!-- Topbar Search -->
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Cari nama dosen..." aria-label="Search" aria-describedby="basic-addon2" />
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
               <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -324,342 +335,132 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <div class="row d-flex justify-content-between mb-4 mr-md-1">
-              <div class="">
-                <h1 class="h3 ml-xl-2 mb-0 text-gray-800">Dashboard Profil Dosen</h1>
-              </div>
-
-              <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Masukkan Nama" aria-label="Search" />
-                <a href="profilDosen.html" class="btn btn-primary">Cari Dosen</a>
-              </form>
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">Profil Kesejahteraan Dosen</h1>
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
             </div>
 
             <!-- Content Row -->
-            <div class="row">
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Jumlah Dosen tetap</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">771</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-users fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Rata-rata Umur Dosen</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">34 thn</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-user-friends fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Dosen yang telah vaksin</div>
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">710</div>
+            <div class="row container-fluid">
+              <section class="section about-section gray-bg container-fluid" id="about">
+                <div class="container">
+                  <div class="row align-items-center flex-row-reverse">
+                    <div class="col-lg-8">
+                      <div class="about-text go-to">
+                        <h3 class="dark-color">Ainur Rofiq</h3>
+                        <h6 class="theme-color lead">Prodi Informatika</h6>
+                        <div class="row about-list">
+                          <div class="col-md-6">
+                            <div class="media">
+                              <label>Keluarga</label>
+                              <p>6 Orang</p>
+                            </div>
+                            <div class="media">
+                              <label>Jabatan</label>
+                              <p>Kepala Lektor</p>
+                            </div>
+                            <div class="media">
+                              <label>Potongan</label>
+                              <p>800.000 <a href="#" class="text-black fw-bold">(Lihati Details)</a></p>
+                            </div>
+                            <div class="media">
+                              <label>Masa Kerja</label>
+                              <p>11 thn</p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="media">
+                              <label>E-mail</label>
+                              <p>ainurmoh@gmail.com</p>
+                            </div>
+                            <div class="media">
+                              <label>Phone</label>
+                              <p>085731966274</p>
+                            </div>
+                            <div class="media">
+                              <label>Asal</label>
+                              <p>Malang</p>
+                            </div>
+                            <div class="media">
+                              <label>Freelance</label>
+                              <p>Available</p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-auto">
-                        <i class="fas fa-hospital-user fa-2x text-gray-300"></i>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="about-avatar">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="counter">
+                    <div class="row">
+                      <div class="col-12 col-md-5 col-lg-3">
+                        <div class="count-data text-center">
+                          <h6 class="count h2" data-to="190" data-speed="190">6.650.000</h6>
+                          <p class="m-0px font-w-600">Pendapatan</p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-5 col-lg-3">
+                        <div class="count-data text-center">
+                          <h6 class="count h2" data-to="500" data-speed="500">5.200.000</h6>
+                          <p class="m-0px font-w-600">Gaji Pokok</p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-3">
+                        <div class="count-data text-center">
+                          <h6 class="count h2" data-to="150" data-speed="150">600.000</h6>
+                          <p class="m-0px font-w-600">Tunjangan Keluarga</p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-5 col-lg-3">
+                        <div class="count-data text-center">
+                          <h6 class="count h2" data-to="850" data-speed="850">850.000</h6>
+                          <p class="m-0px font-w-600">Tunjangan Jabatan</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 pt-3">
+                  <!-- Bar Chart -->
+                  <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Pendapatan Selama Masa Kerja</h6>
+                      <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                          <div class="dropdown-header">Menu:</div>
+                          <a class="dropdown-item" href="#">Buka di tab baru</a>
+                          <a class="dropdown-item" href="#">Download .png</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item text-danger" href="#">Report</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body d-flex flex-column flex-row">
+                      <div class="chart-bar d-flex flex-column flex-row">
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+                        <canvas id="ctx" width="1100" height="400"></canvas>
+                      </div>
+                      <div class="mt-4 text-center small">
+                        <span class="mr-2"> <i class="fas fa-circle text-primary"></i> Gaji Pokok </span>
+                        <span class="mr-2"> <i class="fas fa-circle text-success"></i> Tunjangan keluarga </span>
+                        <span class="mr-2"> <i class="fas fa-circle text-info"></i> Tunjangan Jabatan </span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <!-- Pending Requests Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Rata-rata masa kerja dosen</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">12 thn</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-clock fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Content Row -->
-
-            <div class="row">
-              <!-- Area Chart -->
-              <div class="col-xl-8 col-lg-7">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Jumlah Dosen</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Menu:</div>
-                        <a class="dropdown-item" href="#">Buka di tab baru</a>
-                        <a class="dropdown-item" href="#">Download .png</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Report</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-area">
-                      <canvas id="chartJumlahDosen"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pie Chart -->
-              <div class="col-xl-4 col-lg-5">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Status Kepegawaian Dosen Tetap</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Menu:</div>
-                        <a class="dropdown-item" href="#">Buka di tab baru</a>
-                        <a class="dropdown-item" href="#">Download .png</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Report</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <canvas id="chartStatusKepegawaianDosen"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #03fc45"></i> Dosen Tetap Yayasan</span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #00ccff"></i> Dosen Tetap DPK</span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #630091"></i> Dosen LLDIKTI</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Content Row -->
-            <div class="row">
-              <!-- Content Column -->
-              <div class="col-lg-4">
-                <!-- Pie chart Gender Dosen -->
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Dosen Gender</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Menu:</div>
-                        <a class="dropdown-item" href="#">Buka di tab baru</a>
-                        <a class="dropdown-item" href="#">Download .png</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Report</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <canvas id="chartDosenGender"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle text-danger"></i> Laki-laki </span>
-                      <span class="mr-2"> <i class="fas fa-circle text-primary"></i> Perempuan </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xl-4 col-lg-8 col-md-12">
-                <!-- Bar Chart -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Perkiraan Pensiun</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Menu:</div>
-                        <a class="dropdown-item" href="#">Buka di tab baru</a>
-                        <a class="dropdown-item" href="#">Download .png</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Report</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-bar">
-                      <canvas id="chartPerkiraanPensiun"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <!-- Pie Chart Pendidikan Terakhir Dosen -->
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Pendidikan Terakhir Dosen</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Menu:</div>
-                        <a class="dropdown-item" href="#">Buka di tab baru</a>
-                        <a class="dropdown-item" href="#">Download .png</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Report</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <canvas id="chartPendidikanTerakhirDosen"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #ffc107"></i> S1 </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #6573c3"></i> S2 </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #73c365"></i> S3 </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <!-- Pie Chart Jabatan Dosen -->
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Jabatan Akademik</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Menu:</div>
-                        <a class="dropdown-item" href="#">Buka di tab baru</a>
-                        <a class="dropdown-item" href="#">Download .png</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Report</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <canvas id="chartJabatanDosen"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #8e78d6"></i> Tenaga Pengajar </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #30a4fc"></i> Asisten Ahli </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #f44336"></i> Lektor </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #febf44"></i> Lektor Kepala </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #30e8aa"></i> Profesor </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <!-- Bar Chart -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Masa Kerja Dosen</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Menu:</div>
-                        <a class="dropdown-item" href="#">Buka di tab baru</a>
-                        <a class="dropdown-item" href="#">Download .png</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Report</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-bar">
-                      <canvas id="chartMasakerja"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-4 mb-4">
-                <!-- Approach -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                  </div>
-                  <div class="card-body">
-                    <p>Halaman ini di buat menggunakan Bootstrap 4 utility.</p>
-                    <p class="mb-0">Dan mengambil beberapa template sebagai refrensi.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-8 mb-4">
-                <!-- Illustrations -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Mobile Apps</h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="text-center">
-                      <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem" src="img/undraw_posting_photo.svg" alt="..." />
-                    </div>
-                    <p>Anda juga bisa mengakses data via mobile melalui UMM mobile apps yang dapat di download di playstore atau melalui link di bawah ini</p>
-                    <a target="_blank" rel="nofollow" href="https://play.google.com/store/apps/details?id=id.ac.umm.myummstudent">Browse UMM Mobile Apps on Playstore &rarr;</a>
-                  </div>
-                </div>
-              </div>
+              </section>
             </div>
           </div>
           <!-- /.container-fluid -->
@@ -718,16 +519,7 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-    <script src="js/demo/chart-pie-jenisKelaminDosen.js"></script>
-    <script src="js/demo/chart-area-jumlahDosen.js"></script>
-    <script src="js/demo/chart-pie-statusKepegawaianDosen.js"></script>
-    <script src="js/demo/chart-pie-dosenGender.js"></script>
-    <script src="js/demo/chart-pie-jabatanDosen.js"></script>
-    <script src="js/demo/chart-bar-umur.js"></script>
-    <script src="js/demo/chart-pie-pendidikanTerakhir.js"></script>
-    <script src="js/demo/chart-bar-masaKerja.js"></script>
-    <script src="js/demo/chart-bar-perkiraanPensiun.js"></script>
+    <script src="js/demo/chart-area-kesejahteraanDosen.js"></script>
+    <script src="js/demo/chart-bar-kesejahteraanDosen.js"></script>
   </body>
 </html>

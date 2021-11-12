@@ -7,7 +7,7 @@ var ctx = document.getElementById('chartStatusKepegawaianDosen');
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ['Dosen Tetap', 'Dosen Tidak Tetap', 'Dosen Honorer'],
+    labels: ['Dosen Tetap Yayasan', 'Dosen DPK', 'Dosen LLDIKTI'],
     datasets: [
       {
         data: [40, 35, 25],

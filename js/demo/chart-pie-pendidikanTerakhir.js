@@ -7,12 +7,12 @@ var ctx = document.getElementById('chartPendidikanTerakhirDosen');
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ['S2', 'S3'],
+    labels: ['S1', 'S2', 'S3'],
     datasets: [
       {
-        data: [60, 80],
-        backgroundColor: ['#6573c3', '#73c365'],
-        hoverBackgroundColor: ['#3f51b5', '#508846'],
+        data: [30, 60, 80],
+        backgroundColor: ['#ffc107', '#6573c3', '#73c365'],
+        hoverBackgroundColor: ['#cc9a05', '#3f51b5', '#508846'],
         hoverBorderColor: 'rgba(234, 236, 1)',
       },
     ],
