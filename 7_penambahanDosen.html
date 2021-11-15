@@ -165,18 +165,6 @@
               <i class="fa fa-bars"></i>
             </button>
 
-            <!-- Topbar Search -->
-            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-              <div class="input-group">
-                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="button">
-                    <i class="fas fa-search fa-sm"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
-
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
               <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -337,18 +325,17 @@
           <div class="container-fluid">
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Dashboard Load Dosen</h1>
+              <h1 class="h3 mb-0 text-gray-800">Dashboard Penambahan Dosen</h1>
               <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
             </div>
 
             <!-- Content Row -->
-            <div class="row">
-              <div class="col-lg-4">
-                <!-- Pie chart Gender Dosen -->
+            <div class="row contai">
+              <div class="col-xl-4 col-lg-8 col-md-12">
+                <!-- Bar Chart -->
                 <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Berdasarkan Mata Kuliah</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Perkiraan Kebutuhan Dosen <a href="">(Lihat Details)</a></h6>
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -362,27 +349,19 @@
                       </div>
                     </div>
                   </div>
-                  <!-- Card Body -->
                   <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <canvas id="chartLoadDosenMk"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #8e78d6"></i> Kurang dari 5 MK </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #30a4fc"></i> 5-8 MK </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #30e8aa"></i> 9-12 MK</span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #febf44"></i> Lebih dari12 MK </span>
+                    <div class="chart-bar">
+                      <canvas id="chartKebutuhanDosen"></canvas>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div class="col-lg-4">
-                <!-- Pie chart Gender Dosen -->
+                <!-- Bar Chart -->
                 <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Berdasarkan SKS</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Distribusi Umur Dosen</h6>
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -396,27 +375,66 @@
                       </div>
                     </div>
                   </div>
-                  <!-- Card Body -->
                   <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <canvas id="chartLoadDosenSKS"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #8e78d6"></i> Kurang dari 18 SKS </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #30a4fc"></i> 18-20 SKS</span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #30e8aa"></i> 21-23 SKS</span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #febf44"></i> Lebih dari 23 SKS </span>
+                    <div class="chart-bar">
+                      <canvas id="chartUmurDosen"></canvas>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <div class="col-lg-4">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Rasio Dosen Tetap : Mahasiswa (5thn terakhir)</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Menu:</div>
+                        <a class="dropdown-item" href="#">Buka di tab baru</a>
+                        <a class="dropdown-item" href="#">Download .png</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#">Report</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="small font-weight-bold">2016 <span class="float-right">1 : 12</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 8%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">2017 <span class="float-right">1 : 15</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 6%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">2018 <span class="float-right">1 : 9</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 11%" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">2019 <span class="float-right">1 : 10</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">2021 <span class="float-right">1 : 12</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 8%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="col-lg-4 mb-4">
                 <!-- Approach -->
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Cari Data Load Dosen</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Cari Data Dosen</h6>
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -434,17 +452,18 @@
                     <div class="row my-3 mr-md-1">
                       <form class="form-inline d-flex justify-content-center flex-grow-1">
                         <input class="form-control mr-sm-2 mt-5" type="search" placeholder="Masukkan Nama" aria-label="Search" />
-                        <a href="profilDosen.html" class="mt-5 btn btn-primary">Cari Dosen</a>
+                        <a href="profilDosenK.html" class="mt-5 btn btn-primary">Cari Dosen</a>
                         <div class="m-1"></div>
-                        <a href="profilDosen.html" class="btn btn-primary mt-5">Pencarian Lanjut</a>
+                        <a href="profilDosenK.html" class="btn btn-primary mt-5">Pencarian Lanjut</a>
                       </form>
                       <p class="mt-5 ml-lg-3">Anda dapat memasukkan nama dosen.</p>
-                      <p class="mb-0 ml-lg-3">Fitur ini akan menampilkan data dosen yang memuat informasi beban sks dan mata kuliah yang diampu dosen tersebut.</p>
+                      <p class="mb-0 ml-lg-3">Fitur ini akan menampilkan data dosen yang memuat informasi mengenai dosen tersebut.</p>
                     </div>
                     <div class="mt-4"></div>
                   </div>
                 </div>
               </div>
+              <div></div>
             </div>
           </div>
           <!-- /.container-fluid -->
@@ -503,8 +522,7 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-kesejahteraanDosen.js"></script>
-    <script src="js/demo/chart-pie-loadDosenMk.js"></script>
-    <script src="js/demo/chart-pie-loadDosenSks.js"></script>
+    <script src="js/demo/chart-bar-kebutuhanDosen.js"></script>
+    <script src="js/demo/chart-bar-umur.js"></script>
   </body>
 </html>
