@@ -38,7 +38,7 @@ var chart = new Chart(ctx, {
     // put 0, if there is no data for the particular bar
     datasets: [
       {
-        label: 'Gaji Pokok',
+        label: 'Gaji Pokok Golongan 4',
         data: [3800000, 3800000, 4200000, 4200000, 4200000, 4200000, 4500000, 4500000, 5000000, 5000000, 5200000],
         backgroundColor: '#007aff',
       },

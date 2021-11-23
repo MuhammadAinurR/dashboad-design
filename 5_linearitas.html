@@ -342,11 +342,11 @@
             </div>
 
             <div class="row">
-              <div class="col-xl-4 col-lg-4">
+              <div class="col-xl-12 col-lg-12">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Jumlah Dosen Tetap</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Jumlah Dosen Linear & non-Linear</h6>
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -363,7 +363,11 @@
                   <!-- Card Body -->
                   <div class="card-body">
                     <div class="chart-area">
-                      <canvas id="chartJumlahDosen"></canvas>
+                      <canvas id="chartJumlahDosenLinear"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                      <span class="mr-2"> <i class="fas fa-circle" style="color: #4e73de"></i> Dosen Linear </span>
+                      <span class="mr-2"> <i class="fas fa-circle" style="color: #f44336"></i> Dosen non-Linear </span>
                     </div>
                   </div>
                 </div>
@@ -374,7 +378,7 @@
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Pendidikan Terakhir Dosen</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Status Dosen</h6>
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -394,9 +398,40 @@
                       <canvas id="chartPendidikanTerakhirDosen"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #ffc107"></i> S1 </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #6573c3"></i> S2 </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #73c365"></i> S3 </span>
+                      <span class="mr-2"> <i class="fas fa-circle" style="color: #ffc107"></i> sp </span>
+                      <span class="mr-2"> <i class="fas fa-circle" style="color: #6573c3"></i> sp2 </span>
+                      <span class="mr-2"> <i class="fas fa-circle" style="color: #73c365"></i> profesi </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <!-- Pie Chart Pendidikan Terakhir Dosen -->
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Rasio Dosen Linear & non-Linier</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Menu:</div>
+                        <a class="dropdown-item" href="#">Buka di tab baru</a>
+                        <a class="dropdown-item" href="#">Download .png</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#">Report</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                      <canvas id="chartLinierNonLinier"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                      <span class="mr-2"> <i class="fas fa-circle text-primary"></i> Dosen Linier </span>
+                      <span class="mr-2"> <i class="fas fa-circle text-danger"></i> Dosen non-Linier </span>
                     </div>
                   </div>
                 </div>
@@ -424,7 +459,7 @@
                     <div class="row my-3 mr-md-1">
                       <form class="form-inline d-flex justify-content-center flex-grow-1">
                         <input class="form-control mr-sm-2 mt-5" type="search" placeholder="Masukkan Nama" aria-label="Search" />
-                        <a href="profilDosen.html" class="mt-5 btn btn-primary">Cari Dosen</a>
+                        <a href="5.1_linearitas_search.html" class="mt-5 btn btn-primary">Cari Dosen</a>
                         <div class="m-1"></div>
                         <a href="profilDosen.html" class="btn btn-primary mt-5">Pencarian Lanjut</a>
                       </form>
@@ -493,9 +528,10 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-jumlahDosen.js"></script>
+    <script src="js/demo/chart-area-jumlahDosenLinear.js"></script>
     <script src="js/demo/chart-area-jumlahMahasiswa.js"></script>
     <script src="js/demo/chart-pie-dosenMahasiswa.js"></script>
+    <script src="js/demo/chart-pie-linierNonLinier.js"></script>
     <script src="js/demo/chart-pie-pendidikanTerakhir.js"></script>
   </body>
 </html>

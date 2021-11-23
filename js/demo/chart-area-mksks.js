@@ -28,14 +28,14 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
-var ctx = document.getElementById('chartJumlahDosen');
+var ctx = document.getElementById('chartMkSks');
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021'],
     datasets: [
       {
-        label: 'Jumlah Dosen',
+        label: 'Mata Kuliah',
         lineTension: 0.3,
         backgroundColor: 'rgba(78, 115, 223, 0.05)',
         borderColor: 'rgba(78, 115, 223, 1)',
@@ -47,7 +47,24 @@ var myLineChart = new Chart(ctx, {
         pointHoverBorderColor: 'rgba(78, 115, 223, 1)',
         pointHitRadius: 10,
         pointBorderWidth: 2,
-        data: ['181', '178', '198', '179', '190', '180', '171'],
+        data: ['8', '10', '9', '12', '9', '8', '11'],
+        yAxisID: 'left-y-axis',
+      },
+      {
+        label: 'SKS',
+        lineTension: 0.3,
+        backgroundColor: 'rgba(244, 67, 54, 0.05)',
+        borderColor: 'rgba(244, 67, 54, 1)',
+        pointRadius: 3,
+        pointBackgroundColor: 'rgba(244, 67, 54, 1)',
+        pointBorderColor: 'rgba(244, 67, 54, 1)',
+        pointHoverRadius: 3,
+        pointHoverBackgroundColor: 'rgba(244, 67, 54, 1)',
+        pointHoverBorderColor: 'rgba(244, 67, 54, 1)',
+        pointHitRadius: 10,
+        pointBorderWidth: 2,
+        data: ['20', '22', '20', '24', '20', '20', '22'],
+        yAxisID: 'right-y-axis',
       },
     ],
   },
@@ -83,7 +100,7 @@ var myLineChart = new Chart(ctx, {
             padding: 10,
             // Include a dollar sign in the ticks
             callback: function (value, index, values) {
-              return number_format(value) + ' Orang';
+              return number_format(value) + ' Mata Kuliah';
             },
           },
           gridLines: {
@@ -93,6 +110,29 @@ var myLineChart = new Chart(ctx, {
             borderDash: [2],
             zeroLineBorderDash: [2],
           },
+          id: 'left-y-axis',
+          type: 'linear',
+          position: 'left',
+        },
+        {
+          ticks: {
+            maxTicksLimit: 5,
+            padding: 10,
+            // Include a dollar sign in the ticks
+            callback: function (value, index, values) {
+              return number_format(value) + ' SKS';
+            },
+          },
+          gridLines: {
+            color: 'rgb(234, 236, 244)',
+            zeroLineColor: 'rgb(234, 236, 244)',
+            drawBorder: false,
+            borderDash: [2],
+            zeroLineBorderDash: [2],
+          },
+          id: 'right-y-axis',
+          type: 'linear',
+          position: 'right',
         },
       ],
     },
@@ -116,7 +156,7 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function (tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + ' Orang';
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
         },
       },
     },

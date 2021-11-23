@@ -28,14 +28,14 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
-var ctx = document.getElementById('chartJumlahDosen');
+var ctx = document.getElementById('chartJumlahDosenLinear');
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021'],
     datasets: [
       {
-        label: 'Jumlah Dosen',
+        label: 'Jumlah Dosen Linear',
         lineTension: 0.3,
         backgroundColor: 'rgba(78, 115, 223, 0.05)',
         borderColor: 'rgba(78, 115, 223, 1)',
@@ -48,6 +48,21 @@ var myLineChart = new Chart(ctx, {
         pointHitRadius: 10,
         pointBorderWidth: 2,
         data: ['181', '178', '198', '179', '190', '180', '171'],
+      },
+      {
+        label: 'Jumlah Dosen non-Linear',
+        lineTension: 0.3,
+        backgroundColor: 'rgba(244, 67, 54, 0.05)',
+        borderColor: 'rgba(244, 67, 54, 1)',
+        pointRadius: 3,
+        pointBackgroundColor: 'rgba(244, 67, 54, 1)',
+        pointBorderColor: 'rgba(244, 67, 54, 1)',
+        pointHoverRadius: 3,
+        pointHoverBackgroundColor: 'rgba(244, 67, 54, 1)',
+        pointHoverBorderColor: 'rgba(244, 67, 54, 1)',
+        pointHitRadius: 10,
+        pointBorderWidth: 2,
+        data: ['170', '160', '188', '169', '170', '160', '161'],
       },
     ],
   },
