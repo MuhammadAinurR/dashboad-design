@@ -43,7 +43,7 @@ var chart = new Chart(ctx, {
         backgroundColor: '#007aff',
       },
       {
-        label: 'Tunjangan Keluarga',
+        label: 'Tunjangan Keluarga (6 orang)',
         data: [150000, 150000, 300000, 300000, 300000, 300000, 350000, 350000, 400000, 500000, 600000],
         backgroundColor: '#1cc88a',
       },

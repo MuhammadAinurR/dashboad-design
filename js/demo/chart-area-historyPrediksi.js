@@ -27,19 +27,44 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-// Bar Chart Example
-var ctx = document.getElementById('chartKebutuhanDosen');
-var myBarChart = new Chart(ctx, {
-  type: 'bar',
+// Area Chart Example
+var ctx = document.getElementById('chartHistoryPrediksi');
+var myLineChart = new Chart(ctx, {
+  type: 'line',
   data: {
-    labels: ['2021-2023', '2024-2026', '2027-2029', '2030-2032', '2033-2035', '2036-2038'],
+    labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
     datasets: [
       {
-        label: 'Jumlah',
-        backgroundColor: '#4e73df',
-        hoverBackgroundColor: '#2e59d9',
-        borderColor: '#4e73df',
-        data: [21, 17, 40, 33, 32, 28],
+        label: 'Dosen',
+        lineTension: 0.3,
+        backgroundColor: 'rgba(78, 115, 223, 0.05)',
+        borderColor: 'rgba(78, 115, 223, 1)',
+        pointRadius: 3,
+        pointBackgroundColor: 'rgba(78, 115, 223, 1)',
+        pointBorderColor: 'rgba(78, 115, 223, 1)',
+        pointHoverRadius: 3,
+        pointHoverBackgroundColor: 'rgba(78, 115, 223, 1)',
+        pointHoverBorderColor: 'rgba(78, 115, 223, 1)',
+        pointHitRadius: 10,
+        pointBorderWidth: 2,
+        data: ['880', '710', '789', '772', '769', '798', '771', '769', '798', '771'],
+        yAxisID: 'left-y-axis',
+      },
+      {
+        label: 'Mahasiswa',
+        lineTension: 0.3,
+        backgroundColor: 'rgba(244, 67, 54, 0.05)',
+        borderColor: 'rgba(244, 67, 54, 1)',
+        pointRadius: 3,
+        pointBackgroundColor: 'rgba(244, 67, 54, 1)',
+        pointBorderColor: 'rgba(244, 67, 54, 1)',
+        pointHoverRadius: 3,
+        pointHoverBackgroundColor: 'rgba(244, 67, 54, 1)',
+        pointHoverBorderColor: 'rgba(244, 67, 54, 1)',
+        pointHitRadius: 10,
+        pointBorderWidth: 2,
+        data: ['2000', '1750', '1900', '1850', '1800', '1950', '1810', '1800', '1950', '1810'],
+        yAxisID: 'right-y-axis',
       },
     ],
   },
@@ -57,28 +82,25 @@ var myBarChart = new Chart(ctx, {
       xAxes: [
         {
           time: {
-            unit: 'month',
+            unit: 'date',
           },
           gridLines: {
             display: false,
             drawBorder: false,
           },
           ticks: {
-            maxTicksLimit: 6,
+            maxTicksLimit: 7,
           },
-          maxBarThickness: 25,
         },
       ],
       yAxes: [
         {
           ticks: {
-            min: 0,
-            max: 40,
             maxTicksLimit: 5,
             padding: 10,
             // Include a dollar sign in the ticks
             callback: function (value, index, values) {
-              return number_format(value) + ' Orang';
+              return number_format(value) + ' Dosen';
             },
           },
           gridLines: {
@@ -88,28 +110,54 @@ var myBarChart = new Chart(ctx, {
             borderDash: [2],
             zeroLineBorderDash: [2],
           },
+          id: 'left-y-axis',
+          type: 'linear',
+          position: 'left',
+        },
+        {
+          ticks: {
+            maxTicksLimit: 5,
+            padding: 10,
+            // Include a dollar sign in the ticks
+            callback: function (value, index, values) {
+              return number_format(value) + ' Mahasiswa';
+            },
+          },
+          gridLines: {
+            color: 'rgb(234, 236, 244)',
+            zeroLineColor: 'rgb(234, 236, 244)',
+            drawBorder: false,
+            borderDash: [2],
+            zeroLineBorderDash: [2],
+          },
+          id: 'right-y-axis',
+          type: 'linear',
+          position: 'right',
         },
       ],
     },
     legend: {
       display: false,
     },
+
     tooltips: {
+      backgroundColor: 'rgb(255,255,255)',
+      bodyFontColor: '#858796',
       titleMarginBottom: 10,
       titleFontColor: '#6e707e',
       titleFontSize: 14,
-      backgroundColor: 'rgb(255,255,255)',
-      bodyFontColor: '#858796',
       borderColor: '#dddfeb',
       borderWidth: 1,
       xPadding: 15,
       yPadding: 15,
       displayColors: false,
+      intersect: false,
+      mode: 'index',
       caretPadding: 10,
       callbacks: {
         label: function (tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + ' Orang';
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
         },
       },
     },
