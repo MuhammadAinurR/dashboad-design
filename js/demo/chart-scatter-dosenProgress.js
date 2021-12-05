@@ -2,6 +2,7 @@ var ctx = document.getElementById('chartDosenProgress').getContext('2d');
 
 // Define the data
 var data1 = [
+  { x: 5, y: 1 },
   { x: 10, y: 1 },
   { x: 10, y: 2 },
   { x: 10, y: 3 },
@@ -48,30 +49,29 @@ var options = {
   maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
 
   scales: {
-    xAxes: [
-      {
-        scaleLabel: {
-          display: true,
-          labelString: 'Progress',
-        },
-        ticks: {
-          min: 0,
-          max: 100,
+    x: {
+      min: 0,
+      max: 100,
+      title: {
+        display: true,
+        text: 'Progress in %',
+      },
+    },
+    y: {
+      min: 0,
+      max: 7,
+      ticks: {
+        // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+        callback: function (val, index) {
+          // Hide every 2nd tick label
+          return index % 2 === 0 ? this.getLabelForValue(val) : '';
         },
       },
-    ],
-    yAxes: [
-      {
-        scaleLabel: {
-          display: true,
-          labelString: 'Quantity',
-        },
-        ticks: {
-          min: 0,
-          max: 10,
-        },
+      title: {
+        display: true,
+        text: 'Quantity',
       },
-    ],
+    },
   },
 };
 

@@ -29,6 +29,13 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Area Chart Example
 var ctx = document.getElementById('chartHistoryPrediksi');
+var label = ['1: 20', '1: 25', '1: 33', '1:50'];
+var dict = {};
+dict['0.02'] = '1:50';
+dict['0.03'] = '1:33';
+dict['0.04'] = '1:25';
+dict['0.05'] = '1:20';
+
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
@@ -94,12 +101,13 @@ var myLineChart = new Chart(ctx, {
       ],
       yAxes: [
         {
+          beginAtZero: true,
           ticks: {
-            maxTicksLimit: 10,
+            maxTicksLimit: 4,
             padding: 10,
             // Include a dollar sign in the ticks
-            callback: function (value) {
-              return value;
+            callback: function (value, index) {
+              return 'Rasio ' + label[index];
             },
           },
           gridLines: {
@@ -132,7 +140,7 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function (tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + tooltipItem.yLabel;
+          return datasetLabel + ': ' + dict[tooltipItem.yLabel];
         },
       },
     },
