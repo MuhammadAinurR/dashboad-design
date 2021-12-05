@@ -1,37 +1,61 @@
-// Set new default font family and font color to mimic Bootstrap's default styling
-(Chart.defaults.global.defaultFontFamily = 'Nunito'), '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-Chart.defaults.global.defaultFontColor = '#858796';
-
+const data = {
+  labels: ['<2thn', '2thn', '3thn', '4thn', '>4thn'],
+  datasets: [
+    {
+      label: 'Waktu Studi Lanjut',
+      data: [2, 4, 5, 4, 1],
+      backgroundColor: ['#00ccffcc', '#ff5722cc', '#764dbe80', '#ffeb3bcc', '#03fc45cc'],
+      hoverBackgroundColor: ['#006680', '#b73e18', '#470068', '#ccbc2f', '#02b030'],
+      hoverBorderColor: 'rgba(234, 236, 1)',
+      borderWidth: 2,
+      cutout: '70',
+    },
+  ],
+};
 // Pie Chart Example
 var ctx = document.getElementById('chartWaktuStudiLanjut');
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
-  data: {
-    labels: ['<2 thn', '2thn', '3thn', '4thn', '>4thn'],
-    datasets: [
-      {
-        data: [2, 4, 5, 4, 1],
-        backgroundColor: ['#00ccff', '#ff5722', '#764dbe', '#ffeb3b', '#03fc45'],
-        hoverBackgroundColor: ['#006680', '#b73e18', '#470068', '#ccbc2f', '#02b030'],
-        hoverBorderColor: 'rgba(234, 236, 1)',
-      },
-    ],
-  },
+  data: data,
   options: {
     maintainAspectRatio: false,
-    tooltips: {
-      backgroundColor: 'rgb(255,255,255)',
-      bodyFontColor: '#858796',
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
+    plugins: {
+      tooltip: {
+        backgroundColor: 'white',
+        bodyColor: '#858796',
+        borderColor: '#dddfeb',
+        borderWidth: 1,
+        xPadding: 15,
+        yPadding: 15,
+        displayColors: false,
+        caretPadding: 10,
+      },
+      legend: {
+        display: false,
+      },
+      datalabels: {
+        color: 'black',
+        labels: {
+          title: {
+            font: {
+              weight: 'bold',
+            },
+          },
+          value: {
+            color: 'white',
+          },
+        },
+        formatter: (value, context) => {
+          const datapoints = context.chart.data.datasets[0].data;
+          function totalSum(total, datapoint) {
+            return total + datapoint;
+          }
+          const totalPercentage = datapoints.reduce(totalSum, 0);
+          const percentageValue = ((value / totalPercentage) * 100).toFixed(1);
+          return [percentageValue + '%'];
+        },
+      },
     },
-    legend: {
-      display: false,
-    },
-    cutoutPercentage: 80,
   },
+  plugins: [ChartDataLabels],
 });

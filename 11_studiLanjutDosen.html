@@ -8,7 +8,7 @@
     <meta name="author" content="" />
 
     <title>Dashboard</title>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
@@ -340,7 +340,7 @@
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Dosen Menempuh Studi Lanjut</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">21</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">27</div>
                       </div>
                       <div class="col-auto">
                         <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -355,7 +355,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Rata-rata Waktu Studi Lanjut</div>
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Rata-rata Waktu Studi Lanjut</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">3 thn</div>
                       </div>
                       <div class="col-auto">
@@ -371,7 +371,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Dosen Gagal Studi Lanjut</div>
+                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Dosen Gagal Studi Lanjut</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
                       </div>
                       <div class="col-auto">
@@ -388,7 +388,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Dosen Berhasil Studi Lanjut</div>
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Dosen Berhasil Studi Lanjut</div>
                         <div class="row no-gutters align-items-center">
                           <div class="col-auto">
                             <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">41</div>
@@ -429,7 +429,7 @@
                   <!-- Card Body -->
                   <div class="card-body">
                     <div class="chart-area">
-                      <canvas id="chartJumlahDosen"></canvas>
+                      <canvas id="chartDosenProgress"></canvas>
                     </div>
                   </div>
                 </div>
@@ -558,7 +558,19 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.1/chart.min.js"
+      integrity="sha512-O2fWHvFel3xjQSi9FyzKXWLTvnom+lOYR/AUEThL/fbP4hv1Lo5LCFCGuTXBRyKC4K4DJldg5kxptkgXAzUpvA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"
+      integrity="sha512-R/QOHLpV1Ggq22vfDAWYOaMd5RopHrJNMxi8/lJu8Oihwi4Ho4BRFeiMiCefn9rasajKjnx9/fTQ/xkWnkDACg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
@@ -572,5 +584,6 @@
     <script src="js/demo/chart-pie-pendidikanTerakhir.js"></script>
     <script src="js/demo/chart-bar-masaKerja.js"></script>
     <script src="js/demo/chart-bar-perkiraanPensiun.js"></script>
+    <script src="js/demo/chart-scatter-dosenProgress.js"></script>
   </body>
 </html>
