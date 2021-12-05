@@ -28,7 +28,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Bar Chart Example
-var ctx = document.getElementById('ctx');
+var ctx = document.getElementById('chartPendapatanDosen');
 var chart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -40,17 +40,17 @@ var chart = new Chart(ctx, {
       {
         label: 'Gaji Pokok Golongan 4',
         data: [3800000, 3800000, 4200000, 4200000, 4200000, 4200000, 4500000, 4500000, 5000000, 5000000, 5200000],
-        backgroundColor: '#007aff',
+        backgroundColor: '#36b9cd',
       },
       {
         label: 'Tunjangan Keluarga (6 orang)',
         data: [150000, 150000, 300000, 300000, 300000, 300000, 350000, 350000, 400000, 500000, 600000],
-        backgroundColor: '#1cc88a',
+        backgroundColor: '#007aff',
       },
       {
         label: 'Tunjangan Jabatan',
         data: [0, 0, 0, 0, 0, 0, 0, 0, 300000, 400000, 850000],
-        backgroundColor: '#36b9cd',
+        backgroundColor: '#1cc88a',
       },
     ],
   },

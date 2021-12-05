@@ -35,23 +35,7 @@ var myLineChart = new Chart(ctx, {
     labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
     datasets: [
       {
-        label: 'Dosen',
-        lineTension: 0.3,
-        backgroundColor: 'rgba(78, 115, 223, 0.05)',
-        borderColor: 'rgba(78, 115, 223, 1)',
-        pointRadius: 3,
-        pointBackgroundColor: 'rgba(78, 115, 223, 1)',
-        pointBorderColor: 'rgba(78, 115, 223, 1)',
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: 'rgba(78, 115, 223, 1)',
-        pointHoverBorderColor: 'rgba(78, 115, 223, 1)',
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        data: ['880', '710', '789', '772', '769', '798', '771', '769', '798', '771'],
-        yAxisID: 'left-y-axis',
-      },
-      {
-        label: 'Mahasiswa',
+        label: 'Rasio',
         lineTension: 0.3,
         backgroundColor: 'rgba(244, 67, 54, 0.05)',
         borderColor: 'rgba(244, 67, 54, 1)',
@@ -63,8 +47,7 @@ var myLineChart = new Chart(ctx, {
         pointHoverBorderColor: 'rgba(244, 67, 54, 1)',
         pointHitRadius: 10,
         pointBorderWidth: 2,
-        data: ['2000', '1750', '1900', '1850', '1800', '1950', '1810', '1800', '1950', '1810'],
-        yAxisID: 'right-y-axis',
+        data: ['0.02', '0.03', '0.04', '0.03', '0.04', '0.05', '0.03', '0.04', '0.03', '0.05'],
       },
     ],
   },
@@ -89,18 +72,18 @@ var myLineChart = new Chart(ctx, {
             drawBorder: false,
           },
           ticks: {
-            maxTicksLimit: 7,
+            maxTicksLimit: 20,
           },
         },
       ],
       yAxes: [
         {
           ticks: {
-            maxTicksLimit: 5,
+            maxTicksLimit: 10,
             padding: 10,
             // Include a dollar sign in the ticks
-            callback: function (value, index, values) {
-              return number_format(value) + ' Dosen';
+            callback: function (value) {
+              return value;
             },
           },
           gridLines: {
@@ -110,36 +93,12 @@ var myLineChart = new Chart(ctx, {
             borderDash: [2],
             zeroLineBorderDash: [2],
           },
-          id: 'left-y-axis',
-          type: 'linear',
-          position: 'left',
-        },
-        {
-          ticks: {
-            maxTicksLimit: 5,
-            padding: 10,
-            // Include a dollar sign in the ticks
-            callback: function (value, index, values) {
-              return number_format(value) + ' Mahasiswa';
-            },
-          },
-          gridLines: {
-            color: 'rgb(234, 236, 244)',
-            zeroLineColor: 'rgb(234, 236, 244)',
-            drawBorder: false,
-            borderDash: [2],
-            zeroLineBorderDash: [2],
-          },
-          id: 'right-y-axis',
-          type: 'linear',
-          position: 'right',
         },
       ],
     },
     legend: {
       display: false,
     },
-
     tooltips: {
       backgroundColor: 'rgb(255,255,255)',
       bodyFontColor: '#858796',
@@ -157,7 +116,7 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function (tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+          return datasetLabel + ': ' + tooltipItem.yLabel;
         },
       },
     },
