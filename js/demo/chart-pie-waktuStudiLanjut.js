@@ -1,11 +1,11 @@
 const data = {
-  labels: ['<2thn', '2thn', '3thn', '4thn', '>4thn'],
+  labels: ['<3thn', '3thn', '4thn', '>4thn'],
   datasets: [
     {
       label: 'Waktu Studi Lanjut',
-      data: [2, 4, 5, 4, 1],
-      backgroundColor: ['#00ccffcc', '#ff5722cc', '#764dbe80', '#ffeb3bcc', '#03fc45cc'],
-      hoverBackgroundColor: ['#006680', '#b73e18', '#470068', '#ccbc2f', '#02b030'],
+      data: [2, 5, 4, 1],
+      backgroundColor: ['#00ccffcc', '#764dbe80', '#ffeb3bcc', '#03fc45cc'],
+      hoverBackgroundColor: ['#006680', '#470068', '#ccbc2f', '#02b030'],
       hoverBorderColor: 'rgba(234, 236, 1)',
       borderWidth: 2,
       cutout: '70',

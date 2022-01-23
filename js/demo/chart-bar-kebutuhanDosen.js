@@ -32,7 +32,7 @@ var ctx = document.getElementById('chartKebutuhanDosen');
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['2021-2023', '2024-2026', '2027-2029', '2030-2032', '2033-2035', '2036-2038'],
+    labels: ['2023', '2024', '2025', '2026', '2027', '2028'],
     datasets: [
       {
         label: 'Jumlah',
