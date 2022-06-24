@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advance Search</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid mx-auto bg-dark" style="width: 95%">
+      <h1 class="h2 m-1 p-3 text-white">Advance Search</h1>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">NIP :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan NIP</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">NIDN :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput2"
+          />
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan NIDN</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Nama :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput2"
+          />
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan nama</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Usia :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput2"
+          />
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan usia</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Tahun Masuk :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput2"
+          />
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan tahun masuk</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Masa Kerja :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput2"
+          />
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan masa kerja</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Jenis Kelamin :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput2"
+          />
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan jenis kelamin</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Tahun Perkiraan Pensiun :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput2"
+          />
+        </div>
+        <div class="col-3 p-2 m-1">
+          <div class="text-white m-1">
+            Cari berdasarkan tahun perkiraan pensiun
+          </div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Fakultas :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <div class="dropdown">
+            <button
+              type="button"
+              class="btn btn-light dropdown-toggle col-12"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              Pilih Fakultas
+            </button>
+            <div class="dropdown-menu p-4">
+              <div class="col-6"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Fakultas Kedokteran
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Ekonomi dan Bisnis
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Ilmu Sosial dan Politik
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                  checked
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Pertanian dan Peternakan
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Keguruan dan Ilmu Pendidikan
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Hukum
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Agama Islam
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                  checked
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Teknik
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Ilmu Kesehatan
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Fakultas Psikologi
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan fakultas</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Program Studi :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <div class="dropdown py-2">
+            <button
+              type="button"
+              class="btn btn-light dropdown-toggle col-12"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              Pilih Program Studi
+            </button>
+            <div class="dropdown-menu p-4">
+              <div class="col-6"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Teknik Elektro
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Teknik Industri
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Teknik Mesin
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                  checked
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Teknik Informatika
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Teknik Sipil
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Agroteknologi
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Budidaya Perairan
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Kehutanan
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Peternakan
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Agribisnis
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan program studi</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Status Dosen :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <div class="dropdown py-2">
+            <button
+              type="button"
+              class="btn btn-light dropdown-toggle col-12"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              Pilih Status Dosen
+            </button>
+            <div class="dropdown-menu p-4">
+              <div class="col-6"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Dosen Tetap Kopertis
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Dosen Tetap yayasan
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Dosen Luar Biasa
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Dosen Perjanjian Khusus
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Dosen Cados
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Dosen Kontrak
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan status dosen</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Status Aktivasi :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <div class="dropdown py-2">
+            <button
+              type="button"
+              class="btn btn-light col-12 dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              Status Aktivasi
+            </button>
+            <div class="dropdown-menu p-4">
+              <div class="col-6"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Aktif
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Tugas belajar
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Cuti
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Studi Lanjut
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Tugas di Instansi Lain
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan status aktivasi</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Pangkat Golongan :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <div class="dropdown py-2">
+            <button
+              type="button"
+              class="btn btn-light col-12 dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              Pangkat Golongan
+            </button>
+            <div class="dropdown-menu p-4">
+              <div class="col-6"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  CAPEG
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PENATA MUDA-III/A
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PENATA MUDA TK.I-III/B
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PENATA-III/C
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PENATA TK.I-III/D
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PEMBINA-IV/A
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PEMBINA TK.I-IV/B
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PEMBINA UTAMA MUDA-IV/C
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PEMBINA UTAMA MADYA-IV/D
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  PEMBINA UTAMA-IV/E
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan pangkat golongan</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Jabatan Akademik :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <div class="dropdown py-2">
+            <button
+              type="button"
+              class="btn btn-light col-12 dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              Jabatan Akademik
+            </button>
+            <div class="dropdown-menu p-4">
+              <div class="col-6"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  TENAGA PENGAJAR
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  ASISTEN AHLI
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  LEKTOR
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  LEKTOR KEPALA
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  GURU BESAR
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan jabatan akademik</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Pendidikan :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <div class="dropdown py-2">
+            <button
+              type="button"
+              class="btn btn-light col-12 dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              Pendidikan
+            </button>
+            <div class="dropdown-menu p-4">
+              <div class="col-6"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  SD
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  SMP
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  SMA/SMK
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  D1
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  D2
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  D3
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  D4
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Sp1
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Sp2
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Profesi
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  S1
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                  checked
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  S2
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  S3
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan pendidikan</div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-2">
+          <div class="p-3 m-1 text-white">Status Kawin :</div>
+        </div>
+        <div class="col-5 p-2 m-1">
+          <div class="dropdown py-2">
+            <button
+              type="button"
+              class="btn btn-light col-12 dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              Status Kawin
+            </button>
+            <div class="dropdown-menu p-4">
+              <div class="col-6"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Belum Kawin
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Duda
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Janda
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Kawin
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 p-2 m-1">
+          <div class="text-white m-1">Cari berdasarkan status kawin</div>
+        </div>
+      </div>
+      <div class="row d-flex flex-row-reverse">
+        <div class="col-2">
+          <button type="button" class="btn btn-primary">Advance Search</button>
+        </div>
+      </div>
+      <div class="py-5 row d-flex justify-content-center">
+        <div class="card" style="width: 55%">
+          <div class="card-body">
+            <h5 class="card-title">Hasil Pencarian</h5>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Pendidikan</th>
+                  <th scope="col">Fakultas</th>
+                  <th scope="col">Jurusan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Ainur1</td>
+                  <td>S2</td>
+                  <td>Teknik</td>
+                  <td>Informatika</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Ainur2</td>
+                  <td>S2</td>
+                  <td>Teknik</td>
+                  <td>Informatika</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Ainur 3</td>
+                  <td>S2</td>
+                  <td>Teknik</td>
+                  <td>Informatika</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
